@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
     <p>
       introduction works!
     </p>
+    <lib-saying-hello></lib-saying-hello>
   `,
   styles: [
   ]
