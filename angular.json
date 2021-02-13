@@ -122,6 +122,126 @@
           }
         }
       }
+    },
+    "interaction": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/interaction",
+      "sourceRoot": "projects/interaction/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/interaction",
+            "index": "projects/interaction/src/index.html",
+            "main": "projects/interaction/src/main.ts",
+            "polyfills": "projects/interaction/src/polyfills.ts",
+            "tsConfig": "projects/interaction/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/interaction/src/favicon.ico",
+              "projects/interaction/src/assets"
+            ],
+            "styles": [
+              "projects/interaction/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/interaction/src/environments/environment.ts",
+                  "with": "projects/interaction/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "interaction:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "interaction:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "interaction:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/interaction/src/test.ts",
+            "polyfills": "projects/interaction/src/polyfills.ts",
+            "tsConfig": "projects/interaction/tsconfig.spec.json",
+            "karmaConfig": "projects/interaction/karma.conf.js",
+            "assets": [
+              "projects/interaction/src/favicon.ico",
+              "projects/interaction/src/assets"
+            ],
+            "styles": [
+              "projects/interaction/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/interaction/tsconfig.app.json",
+              "projects/interaction/tsconfig.spec.json",
+              "projects/interaction/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/interaction/e2e/protractor.conf.js",
+            "devServerTarget": "interaction:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "interaction:serve:production"
+            }
+          }
+        }
+      }
     }
   },
   "defaultProject": "saying-hello"
