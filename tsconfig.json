@@ -11,6 +11,19 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",
+    "paths": {
+      "introduction": [
+        "projects/introduction/src/public-api"
+      ],
+      "saying-hello": [
+        "dist/saying-hello/public-api"
+        // "projects/saying-hello/src/lib/*",
+        // "projects/saying-hello/src/lib",
+      ],
+      "@saying-goodbye": [
+        "projects/saying-hello/src/public-api"
+      ]
+    },
     "module": "es2020",
     "lib": [
       "es2018",

@@ -3,5 +3,126 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "saying-hello": {
+      "projectType": "library",
+      "root": "projects/saying-hello",
+      "sourceRoot": "projects/saying-hello/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/saying-hello/tsconfig.lib.json",
+            "project": "projects/saying-hello/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/saying-hello/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/saying-hello/src/test.ts",
+            "tsConfig": "projects/saying-hello/tsconfig.spec.json",
+            "karmaConfig": "projects/saying-hello/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/saying-hello/tsconfig.lib.json",
+              "projects/saying-hello/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "saying-goodbye": {
+      "projectType": "library",
+      "root": "projects/saying-goodbye",
+      "sourceRoot": "projects/saying-goodbye/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/saying-goodbye/tsconfig.lib.json",
+            "project": "projects/saying-goodbye/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/saying-goodbye/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/saying-goodbye/src/test.ts",
+            "tsConfig": "projects/saying-goodbye/tsconfig.spec.json",
+            "karmaConfig": "projects/saying-goodbye/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/saying-goodbye/tsconfig.lib.json",
+              "projects/saying-goodbye/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "introduction": {
+      "projectType": "library",
+      "root": "projects/introduction",
+      "sourceRoot": "projects/introduction/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/introduction/tsconfig.lib.json",
+            "project": "projects/introduction/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/introduction/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/introduction/src/test.ts",
+            "tsConfig": "projects/introduction/tsconfig.spec.json",
+            "karmaConfig": "projects/introduction/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/introduction/tsconfig.lib.json",
+              "projects/introduction/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "saying-hello"
 }
