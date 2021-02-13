@@ -12,16 +12,14 @@
     "importHelpers": true,
     "target": "es2015",
     "paths": {
-      "introduction": [
-        "projects/introduction/src/public-api"
+      "@introduction": [
+        "projects/introduction-public-api"
       ],
-      "saying-hello": [
-        "dist/saying-hello/public-api"
-        // "projects/saying-hello/src/lib/*",
-        // "projects/saying-hello/src/lib",
+      "@saying-hello": [
+        "projects/saying-hello/src/public-api"
       ],
       "@saying-goodbye": [
-        "projects/saying-hello/src/public-api"
+        "projects/saying-goodbye/src/public-api*"
       ]
     },
     "module": "es2020",

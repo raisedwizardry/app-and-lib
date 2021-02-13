@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'lib-saying-hello',
   template: `
     <p>
-      saying-hello works today!
+      woo hoo saying-hello works today!
     </p>
   `,
   styles: [
