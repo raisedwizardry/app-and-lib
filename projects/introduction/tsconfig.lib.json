@@ -2,7 +2,6 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "rootDir": "../.",
     "outDir": "../../out-tsc/lib",
     "target": "es2015",
     "declaration": true,
@@ -19,8 +18,7 @@
     "strictMetadataEmit": true,
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true,
-    "enableResourceInlining": true,
-    "annotateForClosureCompiler": false
+    "enableResourceInlining": true
   },
   "exclude": [
     "src/test.ts",
