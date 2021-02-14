@@ -26,7 +26,7 @@
           "options": {
             "main": "projects/saying-hello/src/test.ts",
             "tsConfig": "projects/saying-hello/tsconfig.spec.json",
-            "karmaConfig": "projects/saying-hello/karma.conf.js"
+            "karmaConfig": "./karma.conf.js"
           }
         },
         "lint": {
@@ -66,7 +66,7 @@
           "options": {
             "main": "projects/saying-goodbye/src/test.ts",
             "tsConfig": "projects/saying-goodbye/tsconfig.spec.json",
-            "karmaConfig": "projects/saying-goodbye/karma.conf.js"
+            "karmaConfig": "./karma.conf.js"
           }
         },
         "lint": {
@@ -106,7 +106,7 @@
           "options": {
             "main": "projects/introduction/src/test.ts",
             "tsConfig": "projects/introduction/tsconfig.spec.json",
-            "karmaConfig": "projects/introduction/karma.conf.js"
+            "karmaConfig": "./karma.conf.js"
           }
         },
         "lint": {
@@ -205,7 +205,7 @@
             "main": "src/test.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
-            "karmaConfig": "karma.conf.js",
+            "karmaConfig": "./karma.conf.js",
             "assets": [
               "src/favicon.ico",
               "src/assets"
